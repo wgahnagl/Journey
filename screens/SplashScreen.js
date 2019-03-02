@@ -15,8 +15,7 @@ export default class SplashScreen extends React.Component {
             <View style={styles.container}>
                 <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                     <View style={styles.SplashContainer}>
-                        <StyledButton onPress={()=> this.props.navigation.navigate('SignIn')} title={ButtonText}
-                                styles = {styles.button}/>
+                        <StyledButton onPress={()=> this.props.navigation.navigate('SignIn')} title={ButtonText}/>
                             <Text>
 
                             </Text>

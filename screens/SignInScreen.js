@@ -33,7 +33,6 @@ export default class SignInScreen extends React.Component {
                         <StyledButton onPress={()=> this.props.navigation.navigate('SignIn')} title={googleButtonText}/>
                         <StyledButton onPress={()=> this.props.navigation.navigate('SignIn')} title={whateverButtonTExt}/>
                         <Text>
-                             This is the sign in pages!
                         </Text>
                     </View>
                 </ScrollView>
