@@ -24,7 +24,7 @@ export default class SignInScreen extends React.Component {
                 <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                     <View style={styles.SplashContainer}>
                         <Text>
-                             fjdklafl;djal;jf l;akjfklsdl; fjl;dkj ajd l;kjal;dkjal;dj f;lak
+                             This is the sign in pages!
                          </Text>
                     </View>
                 </ScrollView>

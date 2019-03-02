@@ -4,7 +4,7 @@ export function globalStyles() {
     return StyleSheet.create({
         container: {
             flex: 1,
-            backgroundColor: '#fff',
+            backgroundColor: 'orange',
         },
         contentContainer: {
             paddingTop: 30,
