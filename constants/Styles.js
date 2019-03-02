@@ -13,6 +13,14 @@ export function globalStyles() {
             alignItems: 'center',
             marginTop: 10,
             marginBottom: 20,
+            marginLeft: 20,
+            marginRight: 20
+        },
+        buttonContainer: {
+            paddingTop: 20,
+            paddingBottom: 20,
+            paddingLeft: 20,
+            paddingRight: 20
         }}
         );
 }
