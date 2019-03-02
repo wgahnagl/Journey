@@ -1,19 +1,22 @@
 import React from 'react';
 import {View, Text, Button, StyleSheet, ScrollView} from 'react-native';
 import * as Styles from "../constants/Styles";
+import {StyledButton} from "../components/StyledButton";
 
-
+const ButtonText = "Sign In";
+const styles = Styles.globalStyles();
 export default class SplashScreen extends React.Component {
+
     static navigationOptions = {
         header: null,
     };
-    ButtonText = "Sign In";
     render() {
         return(
             <View style={styles.container}>
                 <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                     <View style={styles.SplashContainer}>
-                        <Button onPress={()=> this.props.navigation.navigate('SignIn')} title={this.ButtonText}/>
+                        <StyledButton onPress={()=> this.props.navigation.navigate('SignIn')} title={ButtonText}
+                                styles = {styles.button}/>
                             <Text>
 
                             </Text>
@@ -24,6 +27,3 @@ export default class SplashScreen extends React.Component {
     }
 }
 
-
-
-const styles = Styles.globalStyles();

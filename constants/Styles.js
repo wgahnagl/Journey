@@ -13,8 +13,13 @@ export function globalStyles() {
             alignItems: 'center',
             marginTop: 10,
             marginBottom: 20,
-        }}
-        );
+        },
+        button : {
+            padding: 20,
+            backgroundColor: "red",
+            color: "yellow"
+        }
+        });
 }
 
 export function HomeScreenStyles(){
