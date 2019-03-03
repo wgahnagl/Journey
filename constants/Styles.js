@@ -128,8 +128,12 @@ export function globalStyles() {
             justifyContent: 'center',
         },
 
-    });
-
+        settingsContainer: {
+            justifyContent: 'center',
+            marginTop: 50,
+            padding: 20
+        }}
+        );
 }
 
 export const mapStyle = [
