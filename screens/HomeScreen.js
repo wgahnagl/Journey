@@ -45,15 +45,6 @@ export default class HomeScreen extends React.Component {
   this.setState({mapRegion: { latitude: location.coords.latitude, longitude: location.coords.longitude, latitudeDelta: 0.0922, longitudeDelta: 0.0421 }});
 };
 
-  createPictureMemory(){
-  }
-  createPersonMemory(){
-  }
-  createWordMemory(){
-  }
-  createPrivateMemory(){
-  }
-
   render() {
     return (
 
@@ -79,20 +70,24 @@ export default class HomeScreen extends React.Component {
                           />
                             <View style={styles.memoryAddOverlay}>
                               <CircleButton
-                                  primaryColor={'#ff5516'}
-                                  secondaryColor={"orange"}
-                                  onPressButtonTop={this.createPictureMemory()}
-                                  onPressButtonDown={this.createWordMemory()}
-                                  onPressButtonLeft={this.createPrivateMemory()}
-                                  onPressButtonRight={this.createPersonMemory()}
+                                  primaryColor={'#ffd44d'}
+                                  secondaryColor={"#ffc21d"}
+                                  iconButtonTop={require("../assets/images/picture.png")}
+                                  iconButtonBottom={require("../assets/images/write.png")}
+                                  iconButtonLeft={require("../assets/images/secret.png")}
+                                  iconButtonRight={require("../assets/images/friend.png")}
+
+                                  onPressButtonTop={() => this.props.navigation.navigate('AddMemory', { type: "picture", location:this.state.locationResult})}
+                                  onPressButtonDown={() => this.props.navigation.navigate('AddMemory', { type: "write", location:this.state.locationResult})}
+                                  onPressButtonLeft={() => this.props.navigation.navigate('AddMemory', { type: "picture", location:this.state.locationResult})}
+                                  onPressButtonRight={() => this.props.navigation.navigate('AddMemory', { type: "picture", location:this.state.locationResult})}
                                   />
                             </View>
-
                           </View>
-
             }
           </View>
 
+        //Photo Gallery by Ricardo Moreira from the Noun Project
     );
   }
 

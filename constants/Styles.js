@@ -56,6 +56,50 @@ export function globalStyles() {
             width: 50,
             height: 50
         },
+        backButton:{
+            flex: 1,
+            justifyContent: 'flex-end',
+            alignItems: 'center'
+        },
+        preview: {
+            flex: 1,
+            justifyContent: 'flex-end',
+            alignItems: 'center'
+        },
+        capture: {
+            flex: 0,
+            backgroundColor: '#fff',
+            borderRadius: 5,
+            color: '#000',
+            padding: 10,
+            margin: 40
+        },
+        flipButton: {
+            flex: 0.3,
+            height: 40,
+            marginHorizontal: 2,
+            marginBottom: 10,
+            marginTop: 20,
+            borderRadius: 8,
+            borderColor: 'white',
+            borderWidth: 1,
+            padding: 5,
+            alignItems: 'center',
+            justifyContent: 'center',
+        },
+        flipText: {
+            color: 'white',
+            fontSize: 15,
+        },
+        zoomText: {
+            position: 'absolute',
+            bottom: 70,
+            zIndex: 2,
+            left: 2,
+        },
+        picButton: {
+            backgroundColor: 'darkseagreen',
+        },
 
     });
 }
