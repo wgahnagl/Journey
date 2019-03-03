@@ -1,17 +1,12 @@
 import React from 'react';
 import {
-    Button,
-    Image,
-    Platform,
     ScrollView,
-    StyleSheet,
     Text,
-    TouchableOpacity,
     View,
-} from 'react-native';
-import { WebBrowser } from 'expo';
 
-import { MonoText } from '../components/StyledText';
+} from 'react-native';
+import { AuthSession } from 'expo';
+
 import * as Styles from "../constants/Styles";
 import {StyledButton} from "../components/StyledButton";
 
@@ -19,18 +14,26 @@ const googleButtonText = "Sign In With Google";
 const whateverButtonTExt = "Sign In With x";
 const styles = Styles.globalStyles();
 
-export default class SignInScreen extends React.Component {
-    static navigationOptions = {
-        header: null,
-    };
+const APP_ID = 'the app id';
+//
+//I6ULGpMr_Fgol8EPBFkgVlzU
 
+
+export default class SignInScreen extends React.Component {
+
+    state = {
+        result: null,
+    }
 
     render() {
         return (
             <View style={styles.container}>
                 <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                     <View style={styles.SplashContainer}>
-                        <StyledButton onPress={()=> this.props.navigation.navigate('SignIn')} title={googleButtonText}/>
+                        <StyledButton onPress={this._handlePressAsync} title={googleButtonText}/>
+                        {this.state.result ? (
+                            <Text>{JSON.stringify(this.state.result)}</Text>
+                        ): null }
                         <StyledButton onPress={()=> this.props.navigation.navigate('SignIn')} title={whateverButtonTExt}/>
                         <Text>
                         </Text>
@@ -39,6 +42,15 @@ export default class SignInScreen extends React.Component {
             </View>
         );
     }
-
+    _handlePressAsync = async () => {
+        let redirectUrl = AuthSession.getRedirectUrl();
+        let result = await AuthSession.startAsync({
+            authUrl:
+                `https://www.facebook.com/v2.8/dialog/oauth?response_type=token` +
+                `&client_id=517346446613-jia70an56ki4g433oh4ai0733sf2ddod.apps.googleusercontent.com` +
+                `&redirect_uri=${encodeURIComponent(redirectUrl)}`,
+        });
+        this.setState({ result });
+    };
 }
 
