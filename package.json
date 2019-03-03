@@ -13,10 +13,12 @@
   "dependencies": {
     "@expo/samples": "2.1.1",
     "expo": "^32.0.0",
+    "firebase": "^5.8.5",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-app-auth": "^4.1.1",
     "react-native-dotenv": "latest",
-    "react-native-linear-gradient": "^2.5.3",
+    "react-native-oauth": "^2.1.18",
     "react-native-really-awesome-button": "^1.4.0",
     "react-navigation": "^3.0.9"
   },

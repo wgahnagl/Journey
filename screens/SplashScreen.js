@@ -12,6 +12,7 @@ export default class SplashScreen extends React.Component {
     static navigationOptions = {
         header: null,
     };
+
     render() {
         return(
             <View style={styles.container}>
