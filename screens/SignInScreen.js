@@ -1,5 +1,9 @@
 import React from 'react';
 import {
+    Button,
+    Image,
+    ImageBackground,
+    Platform,
     ScrollView,
     Text,
     View,
@@ -90,28 +94,31 @@ export default class SignInScreen extends React.Component {
 
 
     render() {
-        if(!hasTriedSignIn){
-            return(<View style = {styles.container}>
+        if (!hasTriedSignIn) {
+            return (<View style={styles.container}>
                 <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                     <Text>
                         LOADING....
                     </Text>
                 </ScrollView>
             </View>)
-        }else{
+        } else {
             return (
                 <View style={styles.container}>
-                    <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-                        <View style={styles.SplashContainer}>
-                            <StyledButton onPress={() => signInAsync() } title={googleButtonText}/>
-                            <Text>
-                            </Text>
-                        </View>
-                    </ScrollView>
+                    <ImageBackground source={require('../assets/images/relaxing2.jpg')}
+                                     style={styles.backgroundImageContainer}>
+                        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+                            <View style={styles.SplashContainer}>
+                                <StyledButton onPress={() => signInAsync()} title={googleButtonText}/>
+                                <Text style={{fontFamily: 'lora', fontSize: 50, textAlign: 'center', color: 'white'}}>
+                                    I'm only dying inside a little bit.
+                                </Text>
+                            </View>
+                        </ScrollView>
+                    </ImageBackground>
                 </View>
             );
         }
-
     }
 }
 

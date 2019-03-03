@@ -10,7 +10,7 @@ export class StyledButton extends React.Component {
             margin = this.props.margin;
         }
         return(
-        <View style={{margin: margin, width:"80%"}}>
+        <View style={{margin: margin, width:"80%", paddingTop: 10, paddingBottom: 10}}>
             <AwesomeButton onPress={this.props.onPress} stretch={true}>
                 <Text style={{color: 'white', fontSize:20, fontFamily:"monospace"}}> {this.props.title} </Text>
             </AwesomeButton>
