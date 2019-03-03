@@ -38,7 +38,24 @@ export function globalStyles() {
             color: 'orange',
             fontFamily:"monospace",
             fontSize: 20
-        }
+        },
+        addMemory:{
+            position: 'absolute',
+            bottom: 10,
+            right: 10,
+            width: 50,
+            height: 50
+        },
+        map: {
+            ...StyleSheet.absoluteFillObject,
+        },
+        memoryAddOverlay: {
+            position: 'absolute',
+            bottom: 40,
+            right: 40,
+            width: 50,
+            height: 50
+        },
 
     });
 }

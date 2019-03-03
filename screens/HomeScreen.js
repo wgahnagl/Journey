@@ -1,14 +1,12 @@
 import React from 'react';
 import {
-  ActivityIndicator,
-  ScrollView,
   Text,
   View,
 } from 'react-native';
 import {Location, MapView, Permissions} from 'expo';
 import * as Styles from "../constants/Styles";
 import {LoadingIcon} from "../components/LoadingIcon";
-import AddMemory from "../components/AddMemory";
+import CircleButton from 'react-native-circle-button';
 
 const styles = Styles.globalStyles();
 
@@ -47,10 +45,19 @@ export default class HomeScreen extends React.Component {
   this.setState({mapRegion: { latitude: location.coords.latitude, longitude: location.coords.longitude, latitudeDelta: 0.0922, longitudeDelta: 0.0421 }});
 };
 
+  createPictureMemory(){
+  }
+  createPersonMemory(){
+  }
+  createWordMemory(){
+  }
+  createPrivateMemory(){
+  }
+
   render() {
     return (
-          <View style={styles.centerText}>
-            <AddMemory/>
+
+          <View style={styles.container}>
             {
               this.state.locationResult === null ?
                   <View style={styles.centerText}>
@@ -64,11 +71,24 @@ export default class HomeScreen extends React.Component {
                       </View> :
                       this.state.mapRegion === null ?
                           <Text>Map region doesn't exist.</Text> :
-                          <MapView
-                              style={{ alignSelf: 'stretch', height: '100%' }}
+                          <View style={styles.container}>
+                            <MapView
+                              style={styles.map}
                               region={this.state.mapRegion}
                               onRegionChange={this._handleMapRegionChange}
                           />
+                            <View style={styles.memoryAddOverlay}>
+                              <CircleButton
+                                  primaryColor={'#ff5516'}
+                                  secondaryColor={"orange"}
+                                  onPressButtonTop={this.createPictureMemory()}
+                                  onPressButtonDown={this.createWordMemory()}
+                                  onPressButtonLeft={this.createPrivateMemory()}
+                                  onPressButtonRight={this.createPersonMemory()}
+                                  />
+                            </View>
+
+                          </View>
 
             }
           </View>
