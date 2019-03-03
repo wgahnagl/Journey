@@ -15,8 +15,6 @@ const whateverButtonTExt = "Sign In With x";
 const styles = Styles.globalStyles();
 
 const APP_ID = 'the app id';
-//
-//I6ULGpMr_Fgol8EPBFkgVlzU
 
 
 export default class SignInScreen extends React.Component {
@@ -47,7 +45,7 @@ export default class SignInScreen extends React.Component {
         let result = await AuthSession.startAsync({
             authUrl:
                 `https://www.facebook.com/v2.8/dialog/oauth?response_type=token` +
-                `&client_id=517346446613-jia70an56ki4g433oh4ai0733sf2ddod.apps.googleusercontent.com` +
+                `&client_id= the client id owo` +
                 `&redirect_uri=${encodeURIComponent(redirectUrl)}`,
         });
         this.setState({ result });
