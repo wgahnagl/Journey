@@ -57,7 +57,6 @@ export function globalStyles() {
             height: 50
         },
         backButton:{
-            flex: 1,
             justifyContent: 'flex-end',
             alignItems: 'center'
         },
@@ -99,6 +98,14 @@ export function globalStyles() {
         },
         picButton: {
             backgroundColor: 'darkseagreen',
+        },
+
+        CameraButton: {height: 40, backgroundColor: '#DF0101', width: '80%', alignSelf: 'center', justifyContent: 'center', alignItems: 'center'},
+        photoGroup: { height: 400, justifyContent: 'space-around', alignItems: 'center', width: "80%", alignSelf: 'center', borderColor: '#DF0101', borderWidth: 1},
+        sideButtonContainer:{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
         },
 
     });
