@@ -16,10 +16,13 @@
     "firebase": "^5.8.5",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-animated-ellipsis": "^1.1.0",
     "react-native-app-auth": "^4.1.1",
+    "react-native-circle-button": "^1.0.9",
     "react-native-dotenv": "latest",
     "react-native-oauth": "^2.1.18",
     "react-native-really-awesome-button": "^1.4.0",
+    "react-native-spinkit": "^1.1.1",
     "react-navigation": "^3.0.9"
   },
   "devDependencies": {

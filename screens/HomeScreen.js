@@ -1,14 +1,16 @@
 import React from 'react';
 import {
-  Platform,
+  ActivityIndicator,
   ScrollView,
   Text,
   View,
 } from 'react-native';
-import {Constants, Location, MapView, Permissions} from 'expo';
+import {Location, MapView, Permissions} from 'expo';
 import * as Styles from "../constants/Styles";
+import {LoadingIcon} from "../components/LoadingIcon";
+import AddMemory from "../components/AddMemory";
 
-const styles = Styles.HomeScreenStyles();
+const styles = Styles.globalStyles();
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -47,29 +49,30 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <View style={styles.container}>
-            <Text style={styles.paragraph}>
-              Pan, zoom, and tap on the map!
-            </Text>
-
+          <View style={styles.centerText}>
+            <AddMemory/>
             {
               this.state.locationResult === null ?
-                  <Text>Finding your current location...</Text> :
+                  <View style={styles.centerText}>
+                    <LoadingIcon/>
+                    <Text style={styles.loadingText}>
+                    </Text>
+                  </View> :
                   this.state.hasLocationPermissions === false ?
-                      <Text>Location permissions are not granted.</Text> :
+                      <View style={styles.centerText}>
+                        <Text>Location permissions are not granted.</Text>
+                      </View> :
                       this.state.mapRegion === null ?
                           <Text>Map region doesn't exist.</Text> :
                           <MapView
-                              style={{ alignSelf: 'stretch', height: 400 }}
+                              style={{ alignSelf: 'stretch', height: '100%' }}
                               region={this.state.mapRegion}
                               onRegionChange={this._handleMapRegionChange}
                           />
+
             }
           </View>
-        </ScrollView>
-      </View>
+
     );
   }
 

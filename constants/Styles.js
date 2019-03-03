@@ -24,9 +24,23 @@ export function globalStyles() {
             resizeMode: 'cover',
             width: '100%',
             height: '100%',
-        }}
-        );
+        },
+        colorContainer:{
+            paddingTop: 30,
+            backgroundColor: "orange"
+        },
+        centerText: {
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+        },
+        loadingText:{
+            color: 'orange',
+            fontFamily:"monospace",
+            fontSize: 20
+        }
 
+    });
 }
 
 export function HomeScreenStyles(){

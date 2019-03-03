@@ -1,9 +1,7 @@
 import React from 'react';
 import {
-    Button,
-    Image,
     ImageBackground,
-    Platform,
+    ActivityIndicator,
     ScrollView,
     Text,
     View,
@@ -14,6 +12,7 @@ import * as Styles from "../constants/Styles";
 import {StyledButton} from "../components/StyledButton";
 import getGithubTokenAsync from "../utils/GithubAuth";
 import * as Secrets from "../conf";
+import {LoadingIcon} from "../components/LoadingIcon";
 
 const googleButtonText = "Sign In With Github";
 const styles = Styles.globalStyles();
@@ -95,13 +94,11 @@ export default class SignInScreen extends React.Component {
 
     render() {
         if (!hasTriedSignIn) {
-            return (<View style={styles.container}>
-                <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-                    <Text>
-                        LOADING....
-                    </Text>
-                </ScrollView>
-            </View>)
+            return (
+                <View style={styles.centerText}>
+                    <LoadingIcon/>
+                </View>
+            )
         } else {
             return (
                 <View style={styles.container}>
