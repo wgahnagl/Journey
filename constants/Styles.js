@@ -24,6 +24,26 @@ export function globalStyles() {
             resizeMode: 'cover',
             width: '100%',
             height: '100%',
+        },
+        imageContainer: {
+            marginRight: 10,
+            marginLeft: 10,
+            width: 100,
+            height: 100,
+        },
+        descriptionContainer: {
+            fontSize: 20,
+            fontFamily: 'lora',
+        },
+        fullPicContainer: {
+            flex: 1,
+            flexDirection: 'row',
+            alignItems: 'center',
+            padding: 10,
+        },
+        separator: {
+            height: 1,
+            backgroundColor: '#dddddd'
         }}
         );
 
