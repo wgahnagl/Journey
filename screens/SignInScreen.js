@@ -12,17 +12,11 @@ import getGithubTokenAsync from "../utils/GithubAuth";
 import * as Secrets from "../conf";
 
 const googleButtonText = "Sign In With Github";
-<<<<<<< HEAD
-const whateverButtonTExt = "Sign In With x";
-=======
->>>>>>> 259e7f5303aa4136efade45289813837e78c54bd
 const styles = Styles.globalStyles();
 
 const GithubStorageKey = '@Expo:GithubToken';
 
-<<<<<<< HEAD
-export default class SignInScreen extends React.Component {
-=======
+
 const firebaseConfig = {
     apiKey: Secrets.FIREBASE_API_KEY,
     projectId: Secrets.FIREBASE_PROJECT_ID,
@@ -65,8 +59,6 @@ async function signOutAsync() {
         alert('Error: ' + message);
     }
 }
->>>>>>> 259e7f5303aa4136efade45289813837e78c54bd
-
 async function attemptToRestoreAuthAsync() {
     let token = await AsyncStorage.getItem(GithubStorageKey);
     if (token) {
@@ -121,18 +113,5 @@ export default class SignInScreen extends React.Component {
         }
 
     }
-<<<<<<< HEAD
-    _handlePressAsync = async () => {
-        let redirectUrl = AuthSession.getRedirectUrl();
-        let result = await AuthSession.startAsync({
-            authUrl:
-                `https://www.facebook.com/v2.8/dialog/oauth?response_type=token` +
-                `` +
-                `&redirect_uri=${encodeURIComponent(redirectUrl)}`,
-        });
-        this.setState({ result });
-    };
-=======
->>>>>>> 259e7f5303aa4136efade45289813837e78c54bd
 }
 
