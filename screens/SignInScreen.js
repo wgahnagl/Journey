@@ -10,12 +10,11 @@ import { AuthSession } from 'expo';
 import * as Styles from "../constants/Styles";
 import {StyledButton} from "../components/StyledButton";
 
-const googleButtonText = "Sign In With Google";
+const googleButtonText = "Sign In With Github";
 const whateverButtonTExt = "Sign In With x";
 const styles = Styles.globalStyles();
 
 const APP_ID = 'the app id';
-
 
 export default class SignInScreen extends React.Component {
 
@@ -45,7 +44,7 @@ export default class SignInScreen extends React.Component {
         let result = await AuthSession.startAsync({
             authUrl:
                 `https://www.facebook.com/v2.8/dialog/oauth?response_type=token` +
-                `&client_id= the client id owo` +
+                `` +
                 `&redirect_uri=${encodeURIComponent(redirectUrl)}`,
         });
         this.setState({ result });
