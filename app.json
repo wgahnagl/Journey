@@ -26,7 +26,10 @@
       "supportsTablet": true
     },
     "android": {
-      "package" : "com.wgahnagl.journey"
+      "package" : "com.wgahnagl.journey",
+      "config": {
+        "googleMaps" : {"apiKey" :  "AIzaSyBDDJuFZ1iAT0tG2i95vlWxzcgiXMBf448"}
+      }
     }
   }
 }

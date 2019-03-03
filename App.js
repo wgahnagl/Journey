@@ -1,5 +1,8 @@
 import React from 'react';
 import { AppLoading, Asset, Font, Icon } from 'expo';
+import {Platform, StyleSheet} from "react-native";
+import { View }  from 'react-native';
+
 import AppNavigator from './navigation/AppNavigator';
 
 export default class App extends React.Component {

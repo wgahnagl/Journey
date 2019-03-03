@@ -4,10 +4,6 @@ export function globalStyles() {
     return StyleSheet.create({
         container: {
             flex: 1,
-            //backgroundColor: 'orange',
-            //resizeMode: 'cover',
-            //width: null,
-            //height: null,
         },
         contentContainer: {
             paddingTop: 30,
@@ -21,10 +17,6 @@ export function globalStyles() {
         },
         buttonContainer: {
             alignItems: 'center',
-            //paddingTop: 20,
-            // paddingBottom: 20,
-            // paddingLeft: 20,
-            // paddingRight: 20,
             width: '80%',
         },
         backgroundImageContainer: {
