@@ -1,11 +1,23 @@
 import React from 'react';
 import { AppLoading, Asset, Font, Icon } from 'expo';
+import {Platform, StyleSheet} from "react-native";
+import { View }  from 'react-native';
+
 import AppNavigator from './navigation/AppNavigator';
 
 export default class App extends React.Component {
+
   state = {
     isLoadingComplete: false,
+    //fontLoaded: false
   };
+
+  /*async componentDidMount() {
+    await Font.loadAsync({
+      'alice': require('./assets/fonts/Alice-Regular.ttf')
+    });
+    this.setState({fontLoaded: true});
+  }; */
 
   render() {
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
@@ -37,7 +49,11 @@ export default class App extends React.Component {
         ...Icon.Ionicons.font,
         // We include SpaceMono because we use it in HomeScreen.js. Feel free
         // to remove this if you are not using it in your app
-        'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+        'playfair': require('./assets/fonts/PlayfairDisplay-Regular.ttf'),
+        'alice': require('./assets/fonts/Alice-Regular.ttf'),
+        'lora': require('./assets/fonts/Lora-Regular.ttf'),
+        'new-athena': require('./assets/fonts/new_athena_unicode.ttf'),
+        'inter-thin': require('./assets/fonts/Inter-Thin-BETA.ttf')
       }),
     ]);
   };
