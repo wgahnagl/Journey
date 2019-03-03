@@ -1,4 +1,5 @@
 {
+  "name": "journey",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -15,11 +16,18 @@
     "expo": "^32.0.0",
     "firebase": "^5.8.5",
     "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native": "^0.57.1",
+    "react-native-action-button": "^2.8.5",
+    "react-native-animated-ellipsis": "^1.1.0",
     "react-native-app-auth": "^4.1.1",
+    "react-native-camera": "^1.12.0",
+    "react-native-circle-button": "^1.0.9",
+    "react-native-circular-action-menu": "^0.5.0",
     "react-native-dotenv": "latest",
     "react-native-oauth": "^2.1.18",
     "react-native-really-awesome-button": "^1.4.0",
+    "react-native-spinkit": "^1.1.1",
+    "react-native-vector-icons": "^6.3.0",
     "react-navigation": "^3.0.9"
   },
   "devDependencies": {
