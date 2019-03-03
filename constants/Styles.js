@@ -25,90 +25,28 @@ export function globalStyles() {
             width: '100%',
             height: '100%',
         },
-        colorContainer:{
-            paddingTop: 30,
-            backgroundColor: "orange"
+        imageContainer: {
+            marginRight: 10,
+            marginLeft: 10,
+            width: 100,
+            height: 100,
         },
-        centerText: {
+        descriptionContainer: {
+            fontSize: 20,
+            fontFamily: 'lora',
+        },
+        fullPicContainer: {
             flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-        },
-        loadingText:{
-            color: 'orange',
-            fontFamily:"monospace",
-            fontSize: 20
-        },
-        addMemory:{
-            position: 'absolute',
-            bottom: 10,
-            right: 10,
-            width: 50,
-            height: 50
-        },
-        map: {
-            ...StyleSheet.absoluteFillObject,
-        },
-        memoryAddOverlay: {
-            position: 'absolute',
-            bottom: 40,
-            right: 40,
-            width: 50,
-            height: 50
-        },
-        backButton:{
-            justifyContent: 'flex-end',
-            alignItems: 'center'
-        },
-        preview: {
-            flex: 1,
-            justifyContent: 'flex-end',
-            alignItems: 'center'
-        },
-        capture: {
-            flex: 0,
-            backgroundColor: '#fff',
-            borderRadius: 5,
-            color: '#000',
-            padding: 10,
-            margin: 40
-        },
-        flipButton: {
-            flex: 0.3,
-            height: 40,
-            marginHorizontal: 2,
-            marginBottom: 10,
-            marginTop: 20,
-            borderRadius: 8,
-            borderColor: 'white',
-            borderWidth: 1,
-            padding: 5,
-            alignItems: 'center',
-            justifyContent: 'center',
-        },
-        flipText: {
-            color: 'white',
-            fontSize: 15,
-        },
-        zoomText: {
-            position: 'absolute',
-            bottom: 70,
-            zIndex: 2,
-            left: 2,
-        },
-        picButton: {
-            backgroundColor: 'darkseagreen',
-        },
-
-        CameraButton: {height: 40, backgroundColor: '#DF0101', width: '80%', alignSelf: 'center', justifyContent: 'center', alignItems: 'center'},
-        photoGroup: { height: 400, justifyContent: 'space-around', alignItems: 'center', width: "80%", alignSelf: 'center', borderColor: '#DF0101', borderWidth: 1},
-        sideButtonContainer:{
             flexDirection: 'row',
             alignItems: 'center',
-            justifyContent: 'center',
+            padding: 10,
         },
+        separator: {
+            height: 1,
+            backgroundColor: '#dddddd'
+        }}
+        );
 
-    });
 }
 
 export const mapStyle = [
