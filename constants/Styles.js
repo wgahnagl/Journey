@@ -4,7 +4,10 @@ export function globalStyles() {
     return StyleSheet.create({
         container: {
             flex: 1,
-            backgroundColor: 'orange',
+            //backgroundColor: 'orange',
+            //resizeMode: 'cover',
+            //width: null,
+            //height: null,
         },
         contentContainer: {
             paddingTop: 30,
@@ -17,12 +20,21 @@ export function globalStyles() {
             marginRight: 20
         },
         buttonContainer: {
-            paddingTop: 20,
-            paddingBottom: 20,
-            paddingLeft: 20,
-            paddingRight: 20
+            alignItems: 'center',
+            //paddingTop: 20,
+            // paddingBottom: 20,
+            // paddingLeft: 20,
+            // paddingRight: 20,
+            width: '80%',
+        },
+        backgroundImageContainer: {
+            flex: 1,
+            resizeMode: 'cover',
+            width: '100%',
+            height: '100%',
         }}
         );
+
 }
 
 export function HomeScreenStyles(){
