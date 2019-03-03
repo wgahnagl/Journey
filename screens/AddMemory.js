@@ -42,7 +42,6 @@ render() {
         </View>
         );}
 
-
     static _save(navigate, location, text) {
     console.log(text);
         let description;
