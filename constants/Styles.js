@@ -44,6 +44,11 @@ export function globalStyles() {
         separator: {
             height: 1,
             backgroundColor: '#dddddd'
+        },
+        settingsContainer: {
+            justifyContent: 'center',
+            marginTop: 50,
+            padding: 20
         }}
         );
 
